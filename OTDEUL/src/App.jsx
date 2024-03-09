@@ -1,14 +1,15 @@
-
-import './App.css'
-import RoutesLayout from './Routers/RoutesLayout'
+import "./App.css";
+import { OpenProvider } from "./ContextApi/OpenProvider";
+import RoutesLayout from "./Routers/RoutesLayout";
 
 function App() {
-
   return (
     <>
-     <RoutesLayout/>
+      <OpenProvider>
+        <RoutesLayout />
+      </OpenProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

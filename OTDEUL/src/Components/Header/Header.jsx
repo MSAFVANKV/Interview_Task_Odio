@@ -1,16 +1,20 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 // imported icons
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosMenu } from "react-icons/io";
 
 // imported images
 import Logo from "../../assets/Images/logo.jpg";
 import Profile from "../../assets/Images/Icons/profile.png";
 import Search from "../../assets/Images/Icons/search.png";
-
+import { useOpen } from "../../ContextApi/OpenProvider";
 
 function Header() {
+  const { open, setOpen } = useOpen();
+  const handleMenuClick = () => {
+    setOpen(!open);
+  };
   const navLinks = [
     {
       id: 1,
@@ -31,11 +35,25 @@ function Header() {
   ];
 
   return (
-    <header className="lg:h-[90px] h-[60px] flex sticky top-0 items-center justify-between mx-10">
+    <header className="lg:h-[90px] z-[99999] bg-white w-[100%] h-[70px] flex sticky top-0 items-center justify-between sm:px-10 px-5">
       {/* logo start */}
-      <div className="w-[130px]">
-        <img src={Logo} alt="Logo" />
+
+      <div className="md:hidden cursor-pointer flex justify-center items-center w-10 h-10 rounded-full">
+        <IoIosMenu size={24} color="#303030" onClick={handleMenuClick} />
       </div>
+      <div className="w-[130px] ">
+        <Link to="/"
+        smooth={true}
+        offset={-70}
+        duration={500}
+        >
+          <img src={Logo} alt="Logo" className="" />
+        </Link>
+        {/* <a href="#HOME">
+      <img src={Logo} alt="Logo" class="" />
+    </a> */}
+      </div>
+
       {/* logo end */}
 
       {/* navlinks start */}
@@ -62,10 +80,14 @@ function Header() {
         <div className="flex justify-center items-center relative">
           <input
             type="text"
-            className=" border outline-none sm:p-2 p-1 lg:w-[250px] md:w-[200px] sm:w-[180px] w-[180px] sm:text-xs text-[0.65rem]"
+            className=" border outline-none p-2 lg:w-[250px] w-[210px]   sm:text-xs text-[0.65rem]"
             placeholder="Find your perfect style..."
           />
-          <img src={Search} alt="search" className="absolute right-1  w-[20px]"  />
+          <img
+            src={Search}
+            alt="search"
+            className="absolute right-1  w-[20px]"
+          />
         </div>
       </div>
     </header>
