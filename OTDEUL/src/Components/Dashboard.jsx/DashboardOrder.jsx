@@ -28,11 +28,11 @@ function DashboardOrder() {
   return (
     <div>
       <div className="my-5">
-        <ul className="gap-1 grid sm:grid-cols-3 grid-cols-2 ">
+        <ul className="sm:gap-5 gap-2 grid sm:grid-cols-3 grid-cols-1 ">
           {details.map((order, index) => (
             <div
               key={order.id}
-              className={`p-5 w-full rounded-lg border flex justify-center items-center ${
+              className={`sm:p-5 p-2 w-full rounded-lg border flex justify-center items-center ${
                 order.id === 1
                   ? "bg-[#FFE3C2]"
                   : order.id === 2

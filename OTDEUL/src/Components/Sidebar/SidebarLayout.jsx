@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoIosMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import Sidebar from "./Sidebar";
+import { useOpen } from "../../ContextApi/OpenProvider";
 
-function SidebarLayout({ open, setOpen }) {
-  //   const [open, setOpen] = useState(false);
+// import images icons
+import cart from '../../assets/Images/Icons/cart.png';
+import like from '../../assets/Images/Icons/like.png';
+import bell from '../../assets/Images/Icons/bell.png';
+
+
+function SidebarLayout() {
+    const { open, setOpen } = useOpen();
+
 
   return (
     <>
@@ -26,7 +34,13 @@ function SidebarLayout({ open, setOpen }) {
             />
           )}
         </div>
-        <div className=" h-[50%] bg-[#E56F61] flex flex-col justify-center items-center"></div>
+        <div className=" h-[50%] bg-[#E56F61] flex flex-col justify-center items-center">
+            <div className="flex flex-col bottom-10 absolute gap-8">
+                <img src={cart} alt="" width={18}/>
+                <img src={like} alt="" width={18} />
+                <img src={bell} alt="" width={18} />
+            </div>
+        </div>
       </div>
       <Sidebar open={open} />
     </>

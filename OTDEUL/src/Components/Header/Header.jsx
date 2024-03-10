@@ -35,13 +35,13 @@ function Header() {
   ];
 
   return (
-    <header className="lg:h-[90px] z-[99999] bg-white w-[100%] h-[70px] flex sticky top-0 items-center justify-between sm:px-10 px-5">
+    <header className="lg:h-[90px] z-[99999] bg-white w-[100%] h-[70px] flex sticky top-0 items-center justify-between sm:px-10 px-1">
       {/* logo start */}
 
       <div className="md:hidden cursor-pointer flex justify-center items-center w-10 h-10 rounded-full">
         <IoIosMenu size={24} color="#303030" onClick={handleMenuClick} />
       </div>
-      <div className="w-[130px] ">
+      <div className="sm:w-[130px] w-[100px] ">
         <Link to="/"
         smooth={true}
         offset={-70}
@@ -80,8 +80,9 @@ function Header() {
         <div className="flex justify-center items-center relative">
           <input
             type="text"
-            className=" border outline-none p-2 lg:w-[250px] w-[210px]   sm:text-xs text-[0.65rem]"
-            placeholder="Find your perfect style..."
+            className=" border outline-none p-2 lg:w-[250px] w-[150px]  sm:text-xs text-[0.65rem]"
+            placeholder={window.innerWidth < 640 ? "Find..." : "Find your perfect style..."}
+
           />
           <img
             src={Search}

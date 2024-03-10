@@ -28,19 +28,19 @@ function Dashboard() {
     },
   ];
   return (
-    <div className="w-full flex flex-col p-5">
+    <div className="w-full flex flex-col sm:p-10 p-2">
       <span className="text-[#393939] text-[32px]">Dashboard</span>
       <div className="my-5">
-        <ul className="gap-5 grid sm:grid-cols-3 grid-cols-2 sm:w-[80%]">
+        <ul className="sm:gap-5 gap-2 grid sm:grid-cols-3 grid-cols-2 sm:w-[80%] w-[100%]">
           {details.map((order, index) => (
-            <div  className="p-3 rounded-lg  border flex items-center">
+            <div  className="p-2 rounded-lg  border flex items-center">
               <li key={order.id} className="flex ">
-                <span className="flex  bg-black w-10 h-10 items-center p-1 rounded-md mr-6  justify-center">
-                  <img src={order.image} alt="" className="text-center" />
+                <span className="flex  bg-black sm:w-10 w-7 h-7 sm:h-10 items-center p-1 rounded-md sm:mr-6 mr-3 justify-center">
+                  <img src={order.image} alt="" className="text-center" width={20}/>
                 </span>
                 <div className="flex flex-col">
                   <span>{order.quantity}</span>
-                  <span className="text-[0.7rem] sm:text-[0.8rem]  text-[#676767]">{order.name}</span>
+                  <span className="text-[0.6rem] sm:text-[0.8rem]  text-[#676767]">{order.name}</span>
                 </div>
               </li>
             </div>

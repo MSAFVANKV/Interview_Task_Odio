@@ -37,8 +37,8 @@ function SeasonFest() {
     <div className="md:flex w-[100%] ">
       <div className="md:w-[40%]">
         <div className="flex gap-2 w-full flex-col pt-5 items-center justify-center">
-          <h2 className="text-[2rem] text-center w-[200px]">Seasonal favourites</h2>
-          <small className="w-[400px] text-center">
+          <h2 className="sm:text-[2rem] text-[1.2rem]   text-center w-[200px]">Seasonal favourites</h2>
+          <small className="md:w-[400px] w-[90%] text-center">
             Orci sapien ultrices aliquet ultrices nulla cras ornare sed.
             Facilisis accumsan parturient
           </small>
@@ -62,8 +62,8 @@ function SeasonFest() {
     {/* ===== responsive time on */}
     <div className="md:w-[40%] md:hidden">
         <div className=" flex gap-2 w-full pt-5 flex-col items-center justify-center">
-          <h2 className="text-[2rem] text-center w-[200px]">Seasonal favourites</h2>
-          <small className="w-[400px] text-center">
+          <h2 className="sm:text-[2rem] text-[1.5rem] text-center w-[200px]">Seasonal favourites</h2>
+          <small className="md:w-[400px] w-[90%] text-center">
             Orci sapien ultrices aliquet ultrices nulla cras ornare sed.
             Facilisis accumsan parturient
           </small>

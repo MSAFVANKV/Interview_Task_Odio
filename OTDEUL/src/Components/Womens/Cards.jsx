@@ -1,26 +1,27 @@
 import React from 'react'
 import { BsCartPlusFill } from 'react-icons/bs'
+import { CARDSDATA } from './CardData'
 
 
-function Cards({cardsData}) {
+function Cards() {
   return (
     <>
-         {cardsData.map((card, index) => (
+         {CARDSDATA.map((card, index) => (
             <div
               key={card.id}
-              className="bg-white h-[340px]  rounded-lg shadow-md"
+              className="bg-white sm:h-[340px]  rounded-lg shadow-md"
             >
               {/* card image */}
-              <div className="flex justify-center items-start h-[65%]">
+              <div className="flex justify-center items-start sm:h-[65%] ">
                 <img
                   src={card.image}
                   alt="cards"
-                  className="h-[12rem] object-cover w-auto"
+                  className="sm:h-[12rem] h-[8rem] object-cover w-auto"
                 />
               </div>
 
               {/* card content */}
-              <div className="w-[100%]  flex h-[35%] px-2">
+              <div className="w-[100%]  flex sm:h-[35%] px-2">
                 {/* =================== */}
                 <div className="w-[70%] h-full ">
                   <h3>{card.title}</h3>
@@ -45,8 +46,8 @@ function Cards({cardsData}) {
                   <button className="flex rounded-sm p-1 justify-center items-center w-full bg-black">
                     <BsCartPlusFill color="white" size={25} className="" />
                   </button>
-                  <button className="flex rounded-sm p-1 justify-center items-center w-full bg-[#E56F61]">
-                    <BsCartPlusFill color="white" size={25} className="" />
+                  <button className="flex rounded-sm p-1 text-white justify-center items-center w-full bg-[#E56F61]">
+                    Buy Now
                   </button>
                 </div>
                 {/* ================== */}

@@ -70,16 +70,16 @@ function WomenTops() {
       <div className="grid md:grid-cols-2 grid-cols-1 h-[100%]" >
         <div className="flex md:h-[100%] w-[100%] justify-center items-center relative " style={{ backgroundImage: `url(${profile})` }}>
           <img src={img3} alt="image1" className="" />
-          <span className="absolute text-[1.8rem] w-12 bottom-[5rem] left-[9rem]">
+          <span className="absolute sm:text-[1.5rem] text-[0.95rem] w-12 bottom-[14%] left-[25%]">
             Women
-            <p className="text-[2.5rem] text-[#323232]">Bottom</p>
+            <p className="text-[2.5rem] text-[#323232]">Tops</p>
           </span>
         </div>
 
         {/* grid 2 */}
 
         <div
-          className="grid grid-cols-2 p-12 gap-3 md:h-[100%] "
+          className="grid md:grid-cols-2 sm:grid-cols-2 grid-cols-1 sm:p-12 p-2 gap-3 md:h-[100%]  "
           // style={{ backgroundImage: `url(${profile})` }}
         >
          <Cards cardsData={cardsData}/>
